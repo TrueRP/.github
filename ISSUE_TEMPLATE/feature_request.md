@@ -1,15 +1,15 @@
 ---
 name: Feature Request
-about: Nieuwe functionaliteit voorstellen
+about: Propose new functionality
 title: "[FEATURE] "
 labels: enhancement
 ---
 
-## Beschrijving
-Wat moet er gebeuren? Waarom is dit nuttig?
+## Description
+What needs to be done? Why is this useful?
 
-## Voorgestelde oplossing
-Hoe zou je dit aanpakken?
+## Proposed Solution
+How would you approach this?
 
-## Alternatieven
-Zijn er andere opties?
+## Alternatives
+Are there other options?
