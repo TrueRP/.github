@@ -1,64 +1,85 @@
-name: Bug Report
-description: File a bug report for TrueRP, lets see if this works
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+name: 📜 Script Issue Template
+description: Use this template for script-related bugs, features or updates
+title: "[ISSUE] 📜 [Script Name]"
+labels: ["Script Issue"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: script_name
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: "Script Name"
+      description: "Name of the script affected by this issue"
+      placeholder: "e.g. inventory-system"
     validations:
       required: true
+
   - type: dropdown
-    id: version
+    id: issue_type
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: "Type"
+      description: "Select the issue type"
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
+        - "🐞 Bug Fix"
+        - "✨ New Feature"
+        - "🔄 Update"
+        - "⚠️ Security"
     validations:
       required: true
+
   - type: dropdown
-    id: browsers
+    id: scope
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: "Scope"
+      description: "Where does this issue occur?"
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+        - "client"
+        - "server"
+        - "both"
+    validations:
+      required: true
+
   - type: checkboxes
-    id: terms
+    id: criticality
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      label: "Impact/Criticality"
+      description: "Select all that apply"
       options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - label: "Breaks existing functionality"
+        - label: "Security vulnerability"
+        - label: "Performance impact"
+        - label: "Blocking issue (cannot continue work)"
+
+  - type: input
+    id: error_message
+    attributes:
+      label: "Console Error Message"
+      description: "Complete error message including file path"
+      placeholder: "e.g. resources/scripts/[name]/client/main.lua:42"
+
+  - type: textarea
+    id: screenshot_info
+    attributes:
+      label: "Console Screenshot"
+      description: "Upload a screenshot of the error in console (drag & drop into issue) and add any relevant notes"
+      placeholder: "See attached screenshot for line 42..."
+      render: markdown
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "Reproduction Steps"
+      description: "Detailed steps to reproduce the problem"
+      placeholder: |
+        1. Go to...
+        2. Execute...
+        3. See error...
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: "Additional Context"
+      description: "Other relevant information (logs, configuration, etc.)"
+      placeholder: "e.g. only happens when X is active..."
+      render: markdown
