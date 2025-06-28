@@ -1,28 +1,13 @@
 name: 📜 Script Issue Template
-description: Use this template for script-related bugs, features or updates
-title: "[ISSUE] 📜 [Script Name]"
+description: Template for script-related issues
+title: "[ISSUE] [Type] - [Brief Description]"
 labels: ["Script Issue"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ℹ️ **Tip:** The repository name is **${{ github.repository }}**. Use this as reference when filling the script name below.
-        
-  - type: input
-    id: script_name
-    attributes:
-      label: "Script Name"
-      description: "Name of the affected script (usually matches repository name)"
-      placeholder: "e.g. ${{ github.repository }}"
-      value: "${{ github.repository }}"
-    validations:
-      required: true
-
   - type: dropdown
     id: issue_type
     attributes:
       label: "Type"
-      description: "Select the issue type"
+      description: "Select issue type"
       options:
         - "🐞 Bug Fix"
         - "✨ New Feature"
@@ -31,11 +16,43 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: title
+    attributes:
+      label: "Title"
+      description: "Concise issue title"
+      placeholder: "Brief description of the issue"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: "Problem Description"
+      description: "Detailed explanation of the issue or feature request"
+      placeholder: "Describe the problem, expected behavior, and actual behavior..."
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "Reproduction Steps"
+      description: "Step-by-step instructions to reproduce the error"
+      placeholder: |
+        1. Action 1...
+        2. Action 2...
+        3. Action 3...
+      render: markdown
+    validations:
+      required: true
+
   - type: dropdown
     id: scope
     attributes:
       label: "Scope"
-      description: "Where does this issue occur?"
+      description: "Where does this occur?"
       options:
         - "client"
         - "server"
@@ -52,40 +69,4 @@ body:
         - label: "Breaks existing functionality"
         - label: "Security vulnerability"
         - label: "Performance impact"
-        - label: "Blocking issue (cannot continue work)"
-
-  - type: input
-    id: error_message
-    attributes:
-      label: "Console Error Message"
-      description: "Complete error message including file path"
-      placeholder: "e.g. resources/scripts/[name]/client/main.lua:42"
-
-  - type: textarea
-    id: screenshot_info
-    attributes:
-      label: "Console Screenshot"
-      description: "Upload a screenshot of the error in console (drag & drop into issue) and add any relevant notes"
-      placeholder: "See attached screenshot for line 42..."
-      render: markdown
-
-  - type: textarea
-    id: reproduction_steps
-    attributes:
-      label: "Reproduction Steps"
-      description: "Detailed steps to reproduce the problem"
-      placeholder: |
-        1. Go to...
-        2. Execute...
-        3. See error...
-      render: markdown
-    validations:
-      required: true
-
-  - type: textarea
-    id: additional_info
-    attributes:
-      label: "Additional Context"
-      description: "Other relevant information (logs, configuration, etc.)"
-      placeholder: "e.g. only happens when X is active..."
-      render: markdown
+        - label: "Blocks development/workflow"
