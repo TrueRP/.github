@@ -3,12 +3,18 @@ description: Use this template for script-related bugs, features or updates
 title: "[ISSUE] 📜 [Script Name]"
 labels: ["Script Issue"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ℹ️ **Tip:** The repository name is **${{ github.repository }}**. Use this as reference when filling the script name below.
+        
   - type: input
     id: script_name
     attributes:
       label: "Script Name"
-      description: "Name of the script affected by this issue"
-      placeholder: "e.g. inventory-system"
+      description: "Name of the affected script (usually matches repository name)"
+      placeholder: "e.g. ${{ github.repository }}"
+      value: "${{ github.repository }}"
     validations:
       required: true
 
