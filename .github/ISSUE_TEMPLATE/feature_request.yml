@@ -1,0 +1,62 @@
+name: "✨ Feature Request"
+description: "Suggest a new feature or improvement for the server."
+title: "[FEATURE] [Brief Description]"
+body:
+  - type: input
+    id: title
+    attributes:
+      label: "Title"
+      description: "Concise title for your feature request."
+      placeholder: "Add a short, descriptive title."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Feature Description"
+      description: "Describe the feature you would like to see. What should it do?"
+      placeholder: "Describe the feature in detail..."
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation"
+      description: "Why do you want this feature? What problem does it solve or what value does it add?"
+      placeholder: "Explain the motivation behind this feature..."
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Possible Alternatives"
+      description: "Have you considered any alternative solutions or features?"
+      placeholder: "List any alternatives you've thought of..."
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: "Screenshots / Mockups (optional)"
+      description: "Add images or mockups to help explain your feature."
+      placeholder: "You can drag & drop images here."
+      render: markdown
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      description: "Please confirm the following before submitting."
+      options:
+        - label: "I have checked that this feature does not already exist."
+        - label: "I have described the motivation and possible alternatives."
+        - label: "I am willing to help implement this feature if needed." 
