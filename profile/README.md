@@ -1,12 +1,18 @@
-## Hi there 👋
+## Welcome to our FiveM Server 👋
 
-<!--
+Hey there! We are a group of enthusiastic beginners building a FiveM server together. 🚗💨
 
-**Here are some ideas to get you started:**
+### About us
+We learn, experiment, and create a fun roleplay experience as a team. Everyone is welcome to join, no matter your experience level!
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+### How can you contribute?
+- Got ideas? Share them with us!
+- Want to help with scripts or mapping? Join our team!
+- Questions? Ask them in our Discord or open an issue.
+
+### Useful links
+- [FiveM Docs](https://docs.fivem.net/)
+- [Markdown Guide](https://docs.github.com/en/github/writing-on-github)
+
+---
+Together, we'll make something awesome! 🎉
